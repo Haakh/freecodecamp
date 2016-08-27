@@ -1,0 +1,31 @@
+
+function mutation(arr) {
+    
+    var len = arr.length;
+    var stop = 0;
+    var flag =0;
+    var arr1 = arr[0];
+    arr1 = arr1.toLowerCase();
+    var arr2 = arr[1];
+    arr2 = arr2.toLowerCase();
+    for (var i =0 ; i < arr2.length ; i++){
+        stop = 0;
+        for ( var j =0;j<arr1.length && stop == 0  ; j++){
+            if(arr2[i] === arr1[j]){
+                stop = 1;
+                flag +=1;
+            }
+        }
+    }
+    console.log("flag",flag);
+    if (flag === arr2.length){
+        console.log("true");
+    }
+    else{
+        console.log("false");
+    }
+    
+  return arr;
+}
+
+mutation(["helhhyhlo", "haey"])
